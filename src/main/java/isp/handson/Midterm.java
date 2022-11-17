@@ -64,4 +64,21 @@ public class Midterm {
     public static byte[] hash(int times, byte[] payload) throws Exception {
         return null;
     }
+
+    /**
+     * Verifies if the MAC tag is correct and if it was received before the deadline
+     *
+     * @param token        that was received
+     * @param deadline     in UNIX time
+     * @param tag          to compare against
+     * @param password     used to derive the MAC key
+     * @param salt         to increase MAC key's enthropy
+     * @param receivedTime UNIX time at which the message was received
+     * @return true iff. the mac verifies and the message was received before the deadline
+     */
+    public static boolean verifyTimed(byte[] token, byte[] deadline, byte[] tag,
+                                      String password, byte[] salt, long receivedTime) throws Exception {
+        return true;
+    }
+
 }
